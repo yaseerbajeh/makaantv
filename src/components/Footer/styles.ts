@@ -7,7 +7,7 @@ export const FooterSection = styled("footer")`
 `;
 
 export const Title = styled("h4")`
-  font-size: 22px;
+  font-size: 44px;
   text-transform: capitalize;
   color: #18216d;
 
@@ -18,7 +18,7 @@ export const Title = styled("h4")`
 
 export const NavLink = styled(Link)`
   display: block;
-  font-size: 1rem;
+  font-size: 4rem;
   margin-bottom: 0.625rem;
   transition: all 0.2s ease-in-out;
 
@@ -45,12 +45,12 @@ export const LogoContainer = styled("div")`
 
 export const Para = styled("div")`
   color: #18216d;
-  font-size: 14px;
+  font-size: 22px;
   width: 70%;
 `;
 
 export const Large = styled(Link)`
-  font-size: 16px;
+  font-size: 32px;
   color: #000;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -127,7 +127,7 @@ export const FooterContainer = styled("div")`
 `;
 
 export const Language = styled("h4")`
-  font-size: 22px;
+  font-size: 40px;
   text-transform: capitalize;
   color: #18216d;
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledButton = styled("button")<{ color?: string }>`
   background: ${(p) => p.color || "#2e186a"};
   color: ${(p) => (p.color ? "#2E186A" : "#fff")};
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   width: 100%;
   border: 1px solid #edf3f5;

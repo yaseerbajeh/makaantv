@@ -1,12 +1,12 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "VEED اشتراك  ",
+  "text": "سواء كورة ولا مسلسلات ولا أفلام, في تطبيق واحد كله موجود",
   "button": [
     {
-      "title": "Explore"
+      "title": "اطلب تجربة مجانية "
     },
     {
-      "title": "Learn more",
+      "title": "تعرف على باقاتنا",
       "color": "#fff"
     }
   ]
