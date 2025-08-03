@@ -82,7 +82,7 @@ const Tarkeeb = () => (
           </a>
           .
         </p>
-        <Link to="/" className="tarkeeb-home-link">
+        <Link to="prices" className="tarkeeb-home-link">
           العودة للصفحة الرئيسية
         </Link>
       </div>
