@@ -9,8 +9,8 @@ import { ContactContainer, ButtonContainer } from "./styles";
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const handleWhatsAppRedirect = () => {
     const phoneNumber = "+966542668201";
-    const message = encodeURIComponent("Hello, I'd like to get in touch!");
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    const message = encodeURIComponent("مرحبا، أود الاستفسار عن باقاتكم.");
+    const whatsappUrl = `https://wa.me/${+966542668201}?text=${message}`;
     window.open(whatsappUrl, "_blank");
   };
 

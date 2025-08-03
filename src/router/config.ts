@@ -1,8 +1,28 @@
+import Home from "../pages/Home";
+import Prices from "../pages/Home/prices";
+import Tarkeeb from "../pages/Home/tarkeeb";
+import  AboutApp  from "../pages/Home/aboutapp";
+
 const routes = [
   {
     path: ["/", "/home"],
     exact: true,
-    component: "Home",
+    component: Home,
+  },
+  {
+    path: ["/prices"],
+    exact: true,
+    component: Prices,
+  },
+  {
+    path: ["/tarkeeb"],
+    exact: true,
+    component: Tarkeeb,
+  },
+    {
+    path: ["/aboutapp"],
+    exact: true,
+    component: AboutApp,
   },
 ];
 

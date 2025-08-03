@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
@@ -24,27 +25,29 @@ const Header = ({ t }: { t: TFunction }) => {
   };
 
   const MenuItem = () => {
-    const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-      setVisibility(false);
-    };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("عملائنا")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("عن التطبيق")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("أسعارنا")}</Span>
-        </CustomNavLinkSmall>
+        <Link to="/clients">
+          <CustomNavLinkSmall>
+            <Span>{t("عملائنا")}</Span>
+          </CustomNavLinkSmall>
+        </Link>
+        <Link to="/aboutapp">
+          <CustomNavLinkSmall>
+            <Span>{t("عن التطبيق")}</Span>
+          </CustomNavLinkSmall>
+        </Link>
+        <Link to="/prices">
+          <CustomNavLinkSmall>
+            <Span>{t("أسعارنا")}</Span>
+          </CustomNavLinkSmall>
+        </Link>
         <CustomNavLinkSmall
+          as="a"
+          href="https://wa.me/+966542668201?text=مرحبا،%20أود%20معرفة%20المزيد%20عن%20الخدمة"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{ width: "200px" }}
-          onClick={() => scrollTo("contact")}
         >
           <Span>
             <Button>{t("تواصل معنا")}</Button>

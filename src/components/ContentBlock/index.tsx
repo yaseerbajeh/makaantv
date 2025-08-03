@@ -1,6 +1,7 @@
 import { Row, Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 
 import { ContentBlockProps } from "./types";
 import { Button } from "../../common/Button";
@@ -26,12 +27,7 @@ const ContentBlock = ({
   id,
   direction,
 }: ContentBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  const history = useHistory();
 
   return (
     <ContentSection>
@@ -58,17 +54,39 @@ const ContentBlock = ({
                           color?: string;
                           title: string;
                         },
-                        id: number
+                        idx: number
                       ) => {
-                        return (
-                          <Button
-                            key={id}
-                            color={item.color}
-                            onClick={() => scrollTo("about")}
-                          >
-                            {t(item.title)}
-                          </Button>
-                        );
+                        // Left button: WhatsApp
+                        if (idx === 0) {
+                          return (
+                            <Button
+                              key={idx}
+                              color={item.color}
+                            >
+                              <a
+                                href="https://wa.me/+966542668201"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "inherit", textDecoration: "none" }}
+                              >
+                                {t(item.title)}
+                              </a>
+                            </Button>
+                          );
+                        }
+                        // Right button: /prices page
+                        if (idx === 1) {
+                          return (
+                            <Button
+                              key={idx}
+                              color={item.color}
+                              onClick={() => history.push("/prices")}
+                            >
+                              {t(item.title)}
+                            </Button>
+                          );
+                        }
+                        return null;
                       }
                     )}
                 </ButtonWrapper>
@@ -107,6 +125,6 @@ const ContentBlock = ({
       </Fade>
     </ContentSection>
   );
-};
+  };
 
 export default withTranslation()(ContentBlock);
