@@ -2,6 +2,7 @@ import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { Button } from "../../common/Button";
+import { Link } from "react-router-dom";
 import { MiddleBlockSection, Content, ContentWrapper } from "./styles";
 
 interface MiddleBlockProps {
@@ -12,12 +13,6 @@ interface MiddleBlockProps {
 }
 
 const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
   return (
     <MiddleBlockSection>
       <Slide direction="up" triggerOnce>
@@ -27,9 +22,9 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
               <h6>{t(title)}</h6>
               <Content>{t(content)}</Content>
               {button && (
-                <Button name="submit" onClick={() => scrollTo("mission")}>
-                  {t(button)}
-                </Button>
+                <Link to="/tarkeeb">
+                  <Button name="submit">{t(button)}</Button>
+                </Link>
               )}
             </Col>
           </ContentWrapper>
