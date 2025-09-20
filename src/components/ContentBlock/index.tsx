@@ -1,7 +1,7 @@
 import { Row, Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 import { ContentBlockProps } from "./types";
 import { Button } from "../../common/Button";
@@ -35,7 +35,6 @@ const ContentBlock = ({
         <StyledRow
           justify="space-between"
           align="middle"
-          id={id}
           direction={direction}
         >
           <Col lg={11} md={11} sm={12} xs={24}>
@@ -47,48 +46,34 @@ const ContentBlock = ({
               <Content>{t(content)}</Content>
               {direction === "right" ? (
                 <ButtonWrapper>
-                  {typeof button === "object" &&
-                    button.map(
-                      (
-                        item: {
-                          color?: string;
-                          title: string;
-                        },
-                        idx: number
-                      ) => {
-                        // Left button: WhatsApp
-                        if (idx === 0) {
-                          return (
-                            <Button
-                              key={idx}
-                              color={item.color}
-                            >
-                              <a
-                                href="https://wa.me/+966542668201"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{ color: "inherit", textDecoration: "none" }}
-                              >
-                                {t(item.title)}
-                              </a>
-                            </Button>
-                          );
-                        }
-                        // Right button: /prices page
-                        if (idx === 1) {
-                          return (
-                            <Button
-                              key={idx}
-                              color={item.color}
-                              onClick={() => history.push("/prices")}
+                  {Array.isArray(button) &&
+                    button.map((item, idx) => {
+                      if (item.type === 'link' && item.to) {
+                        return (
+                          <Link to={item.to} key={idx} style={{ textDecoration: 'none' }}>
+                            <Button color={item.color}>{t(item.title)}</Button>
+                          </Link>
+                        );
+                      }
+                      if (item.type === 'external' && item.href) {
+                        return (
+                          <Button key={idx} color={item.color}>
+                            <a
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{ color: "inherit", textDecoration: "none" }}
                             >
                               {t(item.title)}
-                            </Button>
-                          );
-                        }
-                        return null;
+                            </a>
+                          </Button>
+                        );
                       }
-                    )}
+                      // fallback: if no type, render as plain button
+                      return (
+                        <Button key={idx} color={item.color}>{t(item.title)}</Button>
+                      );
+                    })}
                 </ButtonWrapper>
               ) : (
                 <ServiceWrapper>

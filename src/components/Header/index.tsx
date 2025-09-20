@@ -27,11 +27,7 @@ const Header = ({ t }: { t: TFunction }) => {
   const MenuItem = () => {
     return (
       <>
-        <Link to="/clients">
-          <CustomNavLinkSmall>
-            <Span>{t("عملائنا")}</Span>
-          </CustomNavLinkSmall>
-        </Link>
+
         <Link to="/aboutapp">
           <CustomNavLinkSmall>
             <Span>{t("عن التطبيق")}</Span>
@@ -39,7 +35,27 @@ const Header = ({ t }: { t: TFunction }) => {
         </Link>
         <Link to="/prices">
           <CustomNavLinkSmall>
-            <Span>{t("أسعارنا")}</Span>
+            <Span>{t("IPTV")}</Span>
+          </CustomNavLinkSmall>
+        </Link>
+         <Link to="/netflix">
+          <CustomNavLinkSmall>
+            <Span>{t("نتفلكس")}</Span>
+          </CustomNavLinkSmall>
+        </Link>
+                 <Link to="/shahid">
+          <CustomNavLinkSmall>
+            <Span>{t("شاهد")}</Span>
+          </CustomNavLinkSmall>
+        </Link>
+              <Link to="/youtube">
+          <CustomNavLinkSmall>
+            <Span>{t("يوتيوب")}</Span>
+          </CustomNavLinkSmall>
+        </Link>
+                    <Link to="/packages">
+          <CustomNavLinkSmall>
+            <Span>{t("البكجات")}</Span>
           </CustomNavLinkSmall>
         </Link>
         <CustomNavLinkSmall
