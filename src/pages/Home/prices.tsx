@@ -101,49 +101,20 @@ const Subscription: React.FC = () => {
                 ))}
               </S.FeatureList>
               <S.PricingSection>
-                {[3, 6, 12].map((months) => {
-                  const isTwelveMonth = months === 12;
-                  return (
-                    <S.PricingOption key={months}>
-                      {isTwelveMonth && (
-                        <div style={{
-                          background: 'linear-gradient(90deg, #ff9800 0%, #ffd600 100%)',
-                          color: '#222',
-                          fontWeight: 'bold',
-                          fontSize: '1.5rem',
-                          borderRadius: '8px',
-                          padding: '10px 0',
-                          marginBottom: '10px',
-                          boxShadow: '0 2px 12px rgba(255, 193, 7, 0.18)',
-                          letterSpacing: '1px',
-                        }}>
-                          🎁 مع سنة اضافية هدية مجانا 🎁
-                        </div>
-                      )}
-                      <S.Duration>{months} Months</S.Duration>
-                      <S.Price>ر.س {plan.pricing[months as 3 | 6 | 12]}</S.Price>
-                      {isTwelveMonth && (
-                        <div style={{
-                          color: '#d32f2f',
-                          fontWeight: 'bold',
-                          fontSize: '1.3rem',
-                          margin: '8px 0 0 0',
-                          letterSpacing: '1px',
-                        }}>
-                          سنتين بسعر السنة
-                        </div>
-                      )}
-                      <S.SubscribeButton
-                        as="a"
-                        href={`https://wa.me/+966542668201?text=بطلب%20%20${plan.name}%20%20%20${months}%20أشهر${months > 1 ? '' : ''}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        اشترك الآن
-                      </S.SubscribeButton>
-                    </S.PricingOption>
-                  );
-                })}
+                {[3, 6, 12].map((months) => (
+                  <S.PricingOption key={months}>
+                    <S.Duration>{months} Months</S.Duration>
+                    <S.Price>ر.س {plan.pricing[months as 3 | 6 | 12]}</S.Price>
+                    <S.SubscribeButton
+                      as="a"
+                      href={`https://wa.me/+966542668201?text=بطلب%20%20${plan.name}%20%20%20${months}%20أشهر${months > 1 ? '' : ''}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      اشترك الآن
+                    </S.SubscribeButton>
+                  </S.PricingOption>
+                ))}
               </S.PricingSection>
             </S.PlanCard>
           ))}

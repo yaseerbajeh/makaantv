@@ -87,20 +87,7 @@ const Home = () => {
         ]}
       />
 
-      <ContentBlock
-        direction="right"
-        title={YoutubeContent.title}
-        content={YoutubeContent.text}
-        icon="youtube2.svg"
-        id="youtube-section"
-        button={[
-          {
-            title: YoutubeContent.button,
-            type: 'external',
-            href: 'https://wa.me/+966542668201?text=%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%8A%D9%88%D8%AA%D9%8A%D9%88%D8%A8%20%D9%81%D8%B1%D8%AF%D9%8A%20%D8%B3%D9%86%D9%88%D9%8A',
-          },
-        ]}
-      />
+
 
       <ContentBlock
         direction="right"

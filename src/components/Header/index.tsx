@@ -48,12 +48,7 @@ const Header = ({ t }: { t: TFunction }) => {
             <Span>{t("شاهد")}</Span>
           </CustomNavLinkSmall>
         </Link>
-              <Link to="/youtube">
-          <CustomNavLinkSmall>
-            <Span>{t("يوتيوب")}</Span>
-          </CustomNavLinkSmall>
-        </Link>
-                    <Link to="/packages">
+    <Link to="/packages">
           <CustomNavLinkSmall>
             <Span>{t("البكجات")}</Span>
           </CustomNavLinkSmall>
