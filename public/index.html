@@ -1,61 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KSB3HDSHE2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KSB3HDSHE2');
-</script>
-
+    <!-- Setting charset first for proper encoding -->
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Responsive viewport for mobile SEO -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description"
-      content="مرحبا بكم في متجر مكان تيفي عالم المتعة" />
-    <meta name="keywords"
-      content="مكان, مكان تيفي, MkanTV, IPTV, اشتراك, مسلسلات, أفلام, بث مباشر, ترفيه" />
-    <meta property="og:title" content="MkanTV" />
+    <!-- Updated theme color to match brand (e.g., dark for entertainment vibe) -->
+    <meta name="theme-color" content="#1a1a1a" />
+    <!-- Optimized meta description: concise, keyword-rich, Arabic-first -->
+    <meta name="description" content="اشتراكات مكان تيفي: بث مباشر، مسلسلات، أفلام، وترفيه بجودة عالية في السعودية. جرب عالم المتعة الآن!" />
+    <!-- Enhanced keywords for local and niche relevance -->
+    <meta name="keywords" content="مكان تيفي, MkanTV, اشتراك IPTV, بث مباشر, مسلسلات سعودية, أفلام عربية, ترفيه السعودية, تلفزيون ذكي" />
+    <!-- Canonical URL to prevent duplicate content issues -->
+    <link rel="canonical" href="https://mkantvplus.com/" />
+    <!-- Favicon for branding -->
+    <link rel="icon" href="/favicon.ico" />
+    <!-- Open Graph for social sharing (corrected URL, added image) -->
+    <meta property="og:title" content="مكان تيفي - عالم الترفيه في السعودية" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://landy.website/" />
-    <meta property="og:description"
-      content="مرحبا بكم في متجر مكان تيفي عالم المتعة" />
+    <meta property="og:url" content="https://mkantvplus.com/" />
+    <meta property="og:description" content="استمتع ببث مباشر، مسلسلات، وأفلام مع اشتراكات مكان تيفي. جودة عالية وتجربة ترفيهية مميزة في السعودية." />
+    <meta property="og:image" content="https://mkantvplus.com/og-image.jpg" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:site_name" content="MkanTV" />
+    <!-- Twitter Card for better X/Twitter previews -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="مكان تيفي - اشتراكات IPTV وترفيه في السعودية" />
+    <meta name="twitter:description" content="بث مباشر، مسلسلات، وأفلام بجودة عالية مع مكان تيفي. جرب الترفيه الآن!" />
+    <meta name="twitter:image" content="https://mkantvplus.com/og-image.jpg" />
+    <!-- Robots: Allow indexing and following -->
     <meta name="robots" content="index, follow" />
-    <meta property="og:locale" content="en_EN" />
-  <meta property="og:site_name" content="MkanTV" />
-    <meta property="og:url" content="https://landy.website/" />
-    <meta property="twitter:title" content="MkanTV" />
-    <meta property="twitter:description"
-      content="مرحبا بكم في متجر مكان تيفي عالم المتعة" />
-    <meta property="twitter:site" content="https://landy.website/" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-  <title>MkanTV</title>
+    <!-- Google Analytics (retained, updated to ensure async loading) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSB3HDSHE2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KSB3HDSHE2');
+    </script>
+    <!-- Structured Data (JSON-LD) for Organization to boost brand signals -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MkanTV",
+        "url": "https://mkantvplus.com",
+        "logo": "https://mkantvplus.com/logo.png",
+        "description": "مكان تيفي: اشتراكات IPTV للبث المباشر، المسلسلات، والأفلام في السعودية.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "SA",
+          "addressRegion": "Riyadh"
+        },
+        "sameAs": [
+          "https://x.com/mkantvplus",
+          "https://www.instagram.com/mkantvplus"
+        ]
+      }
+    </script>
+    <!-- Structured Data for Breadcrumb to improve navigation signals -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "الرئيسية",
+            "item": "https://mkantvplus.com/"
+          }
+        ]
+      }
+    </script>
+    <!-- Updated title: Descriptive, keyword-rich, under 60 chars -->
+    <title>مكان تيفي - اشتراكات IPTV وترفيه في السعودية</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Noscript fallback for SEO and accessibility -->
+    <noscript>
+      <div style="text-align: center; padding: 20px;">
+        <h1>مرحبًا بكم في مكان تيفي</h1>
+        <p>استمتع باشتراكات IPTV للبث المباشر، المسلسلات، والأفلام بجودة عالية في السعودية.</p>
+        <p>للحصول على أفضل تجربة، يرجى تفعيل JavaScript في متصفحك.</p>
+        <a href="/products">تسوق اشتراكاتنا الآن</a> | 
+        <a href="/contact">تواصلوا معنا</a>
+      </div>
+    </noscript>
+    <!-- Main React app root -->
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

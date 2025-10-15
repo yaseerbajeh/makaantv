@@ -99,36 +99,7 @@ const Footer = ({ t }: { t: TFunction }) => {
                 />
               </LogoContainer>
             </NavLink>
-            <FooterContainer>
-              <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
-              />
-              <SocialLink
-                href="https://twitter.com/Adrinlolx"
-                src="twitter.svg"
-              />
-              <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
-                src="linkedin.svg"
-              />
-              <SocialLink
-                href="https://medium.com/@lashakakabadze/"
-                src="medium.svg"
-              />
-              <a
-                href="https://ko-fi.com/Y8Y7H8BNJ"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  height="36"
-                  style={{ border: 0, height: 36 }}
-                  src="https://storage.ko-fi.com/cdn/kofi3.png?v=3"
-                  alt="Buy Me a Coffee at ko-fi.com"
-                />
-              </a>
-            </FooterContainer>
+            {/* Social links removed per request */}
           </Row>
         </Container>
       </Extra>

@@ -55,31 +55,45 @@ const WhatsButton = styled.a`
 const NetflixNationalOffer: React.FC = () => {
   return (
     <PageWrapper>
-      <Title>عروض اليوم الوطني</Title>
-  <CenterImage src="/img/svg/packageprices.svg" alt="عروض اليوم الوطني" />
+      <Title>عروض البكجات</Title>
 
-      {/* Offer: 6 months */}
+      
       <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
         <div style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.3rem' }}>
-          بكج ال6 أشهر ب <span style={{ color: '#d32f2f' }}>100</span> ريال
+         <span style={{ color: '#d32f2f' }}>البكج الاسطوري ب150 ريال</span> 
         </div>
         <div style={{ fontSize: '1.1rem', color: '#444', marginBottom: '1.2rem' }}>
-          نتفلكس 6 اشهر + شاهد 6 اشهر + IPTV 6 اشهر
+          نتفلكس 12 شهر + شاهد 12 شهر
         </div>
       </div>
 
-      {/* Offer: 12 months */}
-      <div style={{ textAlign: 'center', marginBottom: '2.2rem' }}>
+        <CenterImage src="/img/svg/package1.svg" alt="عروض اليوم الوطني" />
+
+           <WhatsButton
+  href="https://wa.me/+966542668201?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%A8%D9%83%D8%AC%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D9%8A"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        للشراء تواصل واتس
+      </WhatsButton>
+
+
+
+
+      
+      <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
         <div style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.3rem' }}>
-          بكج السنة ب <span style={{ color: '#d32f2f' }}>150</span> ريال
+         <span style={{ color: '#d32f2f' }}>البكج الفاخر ب190 ريال</span> 
         </div>
-        <div style={{ fontSize: '1.1rem', color: '#444' }}>
+        <div style={{ fontSize: '1.1rem', color: '#444', marginBottom: '1.2rem' }}>
           نتفلكس 12 شهر + شاهد 12 شهر + IPTV  12 شهر
         </div>
       </div>
+            <CenterImage src="/img/svg/package2.svg" alt="عروض اليوم الوطني" />
+
 
       <WhatsButton
-  href="https://wa.me/+966542668201?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B4%D8%B1%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A8%D9%83%D8%AC"
+  href="https://wa.me/+966542668201?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D8%A8%D9%83%D8%AC%20%D8%A7%D9%84%D9%81%D8%A7%D8%AE%D8%B1"
         target="_blank"
         rel="noopener noreferrer"
       >
